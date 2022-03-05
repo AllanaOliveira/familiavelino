@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/sapiencia.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/capa/sapiencia.png' %}" alt="Capa do Sapiência.">
+    </div>
+  </div>
+</div>
+<div class="section-descricao">
+  <div class="text-title">
+    <h1 class="text-center">SAPIÊNCIA</h1>
+  </div>
+  <div class="row text-descricao">
+    <h5>
+      Essa página é destinada a conteúdo que oferece estudos sobre a Palavra de Deus.
+    </h5>
+  </div>
+</div>
+<div class="section-menus">
+  <div class="container-fluid">
+    <div class="row">
+      {% for sapiencia in sapiencias %}
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="{% url 'sapiencia:show(<:id>)' id=sapiencia.id %}">
+            <img class="card-img" src="{% static 'images/sapiencia/(<:imagem>)' imagem=sapiencia.imagem %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">{{ sapiencia.titulo }}</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

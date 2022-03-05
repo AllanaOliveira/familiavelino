@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/exibe_presentes.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/capa/lista_presente.png' %}" alt="Capa do Lista de Presentes.">
+    </div>
+  </div>
+</div>
+{% if msg %}
+<div class="alerta">
+  <div class="alert alert-success" role="alert">
+    {{ msg }}
+  </div>
+</div>
+{% endif %}
+<div class="section-titulo">
+  <div class="text-title">
+    <h4 class="text-center">{{ presente.produto }}</h4>
+  </div>
+</div>
+<div class="section-exibe-presente">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="compos col-lg-6 col-sm-6">
+        <img class="card-img" src="/media/{{ presente.foto }}">
+      </div>
+      <div class="form-presente col-lg-6 col-sm-6">
+        <h5>{{ presente.descricao }}</h5>
+        <h2 class="card-title text-center"><strong>R$ {{ presente.valor }}</strong></h2>
+        {% if not presente.presente %}
+          <form action="{% url 'lista_presentes:exibe_salva_presente' id=presente.id %}" method="POST" class="pb-4">
+            <div class="form-group col-md-6">
+              {{ form.presenteado_por }}
+              {% if form.presenteado_por.errors %}
+                <div class="alert alert-danger mb-0" role="alert" style="padding-top: 2px; padding-bottom: 2px">
+                  {% for error in form.nome.errors %}
+                  <small>{{ error }}</small>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+            <div class="form-group col-md-6">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary submit">Presentear</button>
+            </div>
+          </form>
+        {% else %}
+        <div class="form-group col-md-6">
+          <button class="btn btn-danger submit" disabled>Esse item já foi presenteado.</button>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

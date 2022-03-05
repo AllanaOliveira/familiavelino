@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/plapla.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/capa/plapla.png' %}" alt="Capa do Pláplá.">
+    </div>
+  </div>
+</div>
+<div class="section-descricao">
+  <div class="text-title">
+    <h1 class="text-center">PLÁPLÁ</h1>
+  </div>
+  <div class="row text-descricao">
+    <h5>
+      Essa página é destinada a conteúdo que oferece dicas de filmes, viagens, músicas, séries e muito mais para ajudar a você a saber o que há de melhor para curtir e se divertir.
+    </h5>
+  </div>
+</div>
+<div class="section-menus">
+  <div class="container-fluid">
+    <div class="row">
+      {% for pla in plapla %}
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="{% url 'plapla:show(<:id>)' id=pla.id %}">
+            <img class="card-img" src="{% static 'images/plapla/(<:imagem>)' imagem=pla.imagem %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">{{ pla.titulo }}</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
