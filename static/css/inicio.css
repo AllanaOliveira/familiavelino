@@ -1,0 +1,151 @@
+.section-versiculo {
+    margin: 150px;
+}
+
+.versiculo span {
+    text-align: center;
+}
+
+.section-menus {
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 800px;
+}
+
+.section-menus .card-img {
+    height: 600px;
+    filter: brightness(86%);
+}
+
+.section-menus .card-title {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-top: 120%;
+}
+
+.section-menus .card-text {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+
+.section-who {
+    width: 100%;
+    height: 1000px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.text-who{
+    padding-bottom: 20px;
+}
+
+.text-who h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.text-nos {
+    font-family: 'Nunito', sans-serif;
+    padding-right: 60px;
+    padding-left: 60px;
+    text-align: justify;
+}
+
+.section-who img-nos {
+  height:300px;
+ }
+
+ .img-nos img {
+    width: 100%;
+    display: block;
+ }
+
+div .section-missao {
+    background-image: url('../images/mapa/mapa3.png')
+}
+
+.section-missao {
+    width: 100%;
+    height: 1000px;
+    padding-bottom: 20px;
+}
+
+.img-missao-nos {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .img-missao-nos img {
+    width: 100%;
+ }
+
+.explica-missao-nos{
+    font-family: 'Nunito', sans-serif;
+    padding-right: 80px;
+    padding-left: 80px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1023px){
+    .section-versiculo {
+        margin: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .versiculo {
+        font-size: 12px;
+        text-align: justify;
+        font-family: 'Nunito', sans-serif;
+    }
+    .section-menus {
+        padding: 0px;
+        height: 100%;
+    }
+    .section-menus .card-img {
+        height: 300px;
+    }
+    .section-menus .card-title {
+        margin-top: 80%;
+    }
+    .compos {
+        padding: 10px;
+    }
+    .card-text {
+        display: none;
+    }
+    .section-who {
+        padding: 40px;
+        height: 100%;
+    }
+    .text-who h1{
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    .text-nos {
+        padding: 0px;
+        text-align: justify;
+    }
+    .text-nos h5 {
+        font-size: 16px;
+    }
+    .img-nos div {
+        padding: 10px;
+    }
+    .section-missao {
+        padding: 0px;
+        height: 1000px;
+        padding-bottom: 20px;
+    }
+    .explica-missao-nos {
+        margin: 0px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .explica-missao-nos h5 {
+        font-size: 16px;
+        text-align: justify;
+    }
+}
