@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/inicio.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/casal/missao/missao5.jpg' %}" alt="Foto quando estávamos na Comunidade de Ronda e fizemos louvor com as crianças. Na foto, eu dançava e Bruno tocava violão.">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>...</h5>
+        <p>...</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'images/casal/ensaio_dezembro2021/BRUNO_E_ALLANA-8.jpg' %}" alt="Foto do casal realizada no ensaio fotográfico realizado em dezembro de 2021. Neste momento Bruno está segurando Allana no alto de costas e ela sorrindo.">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>...</h5>
+        <p>...</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'images/casal/missao/missao2.jpg' %}" alt="Foto do casal em missão em Leticia, na Colômbia, apresentando peça teatral de palhaços no porto.">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>...</h5>
+        <p>...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-versiculo">
+    <h2 class="versiculo">
+      <span>
+        "Não fui eu que lhe ordenei? Seja forte e corajoso! Não se apavore, nem se desanime, pois o Senhor, o seu Deus, estará com você por onde você andar." Josué 1:9
+      </span>
+    </h2>
+</div>
+
+<div class="section-menus">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="/eted/?lang=pt-br">
+            <img class="card-img" src="{% static 'images/casal/missao/missao6.jpg' %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">IDE</h2>
+              <p class="card-text">Como é a vida em missões?</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="/eted/?lang=pt-br">
+            <img class="card-img" src="{% static 'images/casal/missao/missao3.jpg' %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">SAPIÊNCIA</h2>
+              <p class="card-text">Estudar e conhecer sempre é a melhor opção!</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="/eted/?lang=pt-br">
+            <img class="card-img" src="{% static 'images/casal/missao/missao4.jpg' %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">PLÁPLÁ</h2>
+              <p class="card-text">Quer dicas de música, filmes e etc?</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="/eted/?lang=pt-br">
+            <img class="card-img" src="{% static 'images/casal/missao/missao7.jpg' %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">PACTO</h2>
+              <p class="card-text">Porque o cordão de 3 dobras não se rompe facilmente.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-who">
+  <div class="text-who">
+    <h1 class="text-center">NOSSA HISTÓRIA</h1>
+  </div>
+  <div class="row text-nos">
+    <h5>
+      Tudo começou em Almirante de Tamandaré, Curitiba, Brasil. Em janeiro de 2021 fomos levados a Curitiba para realizar a <strong data-toggle="tooltip" data-placement="top" title="ETED significa Escola de Treinamento e Discipulado e tem como objetivo nos mostrar mais de quem é Deus e do que Ele tem reservado para a vida de cada um de nós. Também é a escola inicial para quem quer ser missionário pela JOCUM. Ela tem duração de 5 meses onde 3 meses são teóricos e 2 meses são práticos. A nossa teve foco específico em comunicação nos ensinando um pouco mais sobre estratégias nesta área também.">ETED Comunicadores</strong> na <strong data-toggle="tooltip" data-placement="top" title="JOCUM é a sigla para a agência missionária Juventude com uma missão.">Jocum</strong> Almirante de Tamandaré.
+      Neste tempo, que teve duração de 5 meses, Deus nos levou a sermos lapidados por Ele e começarmos a pensar na história dEle e em como poderíamos nos envolver nela pelo Reino.
+      Percebemos, então, que aquele sonho missionário estava colocando-se em prática em nossas vidas através de uma metanoia do Pai.
+    </h5>
+    <h5>
+      Neste processo, individual, Deus nos levou a tornarmos amigos e em um determinado momento o Senhor deu a mim, Allana, uma obra de teatro que envolvia dois palhaços...
+    </h5>
+    <h5 class="text-center">Quer saber mais da nossa história até aqui? <a href="#">(Saiba mais!)</a></h5>
+  </div>
+  <div class="container-fluid">
+    <div class="row img-nos">
+      <div class="col-lg-3 col-sm-12">
+        <img src="{% static 'images/casal/ensaio_dezembro2021/BRUNO_E_ALLANA.jpg' %}" class="rounded" alt="Foto do casal Allana e Bruno olhando um para o outro sorrindo">
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <img src="{% static 'images/casal/ensaio_dezembro2021/BRUNO_E_ALLANA-77.jpg' %}" class="rounded" alt="Foto do casal Allana e Bruno onde Bruno está abraçando Allana por trás, eles sorriem. A foto é preto e branca.">
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <img src="{% static 'images/casal/ensaio_dezembro2021/BRUNO_E_ALLANA-20.jpg' %}" class="rounded" alt="Foto do casal Allana e Bruno andando de mãos dadas.">
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <img src="{% static 'images/casal/ensaio_dezembro2021/BRUNO_E_ALLANA-196.jpg' %}" class="rounded" alt="Foto do casal Allana e Bruno sentados no chão. Bruno olhando Allana e ela sorrindo por sentir cosquinhas.">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-missao">
+  <div class="text-who">
+    <h1 class="text-center">PORQUE MISSÕES?</h1>
+  </div>
+  <div class="explica-missao-nos col-lg-12 col-sm-12">
+    <h5>
+      Desde pequeno sempre amei conhecer a palavra, os personagens bíblicos e me conectar com Deus. Não perdia uma EBD e cresci aprendendo todas as histórias da palavra.
+      Isso foi criando em mim uma vontade de falar do amor de Deus. Ao ver meu Pai como pastor, fui encorajado a desde pequeno gostar de pregar nem que fosse por brincadeira.
+      Até que aos 15 anos me batizei e Deus usou muitas pessoas para falar a mim que eu tinha um propósito específico para minha vida.
+      Lembro de uma tia ter um sonho que eu recebia uma bíblia de ouro, entregue por um ser enorme e muito alto vestido de branco.
+      Lembro também da minha vó falando que sonhava comigo em <a href="{% url 'ide:index' %}">(continua...)</a>
+    </h5>
+    <h6 class="text-center"><strong>Bruno, 28 anos</strong></h6>
+    <br>
+    <h5>
+      Com 13 anos de idade, em um culto dos adolescentes que falava sobre propósito e dons, Deus tocou em meu coração na oração que falava sobre se levantarem missionários.
+      Apartir daquele momento parecia que algo começou a ativar dentro de mim. Eu via meu tio em seus estudos bíblicos e isso começou a me despertar a buscar estudar e conhecer mais da Palavra de Deus.
+      Comecei assim a servir no ministério infantil da minha igreja na parte de louvor e coreografia e logo depois no teatro. Aos 16 anos, sentia que havia algo em mim que necessitava ser compartilhado com os demais.
+      Foi quando <a href="#">(continua...)</a>
+    </h5>
+    <h6 class="text-center"><strong>Allana, 26 anos.</strong></h6>
+  </div>
+  <div class="container-fluid img-missao-nos">
+      <img src="{% static 'images/casal/missao/primeiramissao.jpeg' %}" class="rounded" alt="Foto do casal Allana e Bruno na Comunidade de São Francisco.">
+  </div>
+</div>
+{% endblock %}
