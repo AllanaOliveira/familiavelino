@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block titulo %}
+            Família Avelino
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/template.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}" type="text/css">
+    <link rel="shortcut icon" href="{% static 'images/faviconab.png' %}" />
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    {% block link %}
+
+    {% endblock %}
+
+    <script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/template.js' %}"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fas fa-bars"></i>
+			</button>
+
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'images/logo/logo.png' %}" width="60" height="60" alt="Logo com as nossas iniciais A e B rodeada por um avião com um símbolo de infinito embaixo.">
+            </a>
+            <div class="collapse navbar-collapse" id="nav-content">
+                <div class="navbar-nav mr-auto redes_sociais">
+                    <div class="row">
+                        <a class="d-none d-md-block nav-link nav-item" href="https://www.instagram.com/familiavelino/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a class="d-none d-md-block nav-link nav-item" href="https://m.facebook.com/familiavelino.ab"  target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="navbar-nav">
+                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'lista_presentes:index' %}">Lista de Presentes</a>
+                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'ide:index' %}">Ide</a>
+                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'sapiencia:index' %}">Sapiência</a>
+                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'plapla:index' %}">PláPlá</a>
+                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'pacto:index' %}">Pacto</a>
+                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'origem' %}">Origem</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="principal">
+        <div class="conteudo">
+        {% block corpo %}
+
+        {% endblock %}
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="row">
+                <div class="banco col-lg-4 col-sm-12 text-center">
+                    <img src="{% static 'images/logo/logo_bb.png' %}" class="img-fluid logo_banco" alt="Logo do Banco do Brasil">
+                    <p>Allana Capistrano de Oliveira</p>
+                    <p>Banco do Brasil</p>
+                    <p>Agência: 2948-3</p>
+                    <p>Conta: 34.056-1</p>
+                </div>
+                <div class="banco col-lg-4 col-sm-12 text-center">
+                    <img src="{% static 'images/logo/logo_caixa.png' %}" class="img-fluid logo_banco" alt="Logo da Caixa Econômica">
+                    <p>Bruno Matheus de Souza Avelino</p>
+                    <p>Caixa Econômica</p>
+                    <p>Agência: 2984</p>
+                    <p>Conta Poupança: 000772196097-6</p>
+                </div>
+                <div class="banco col-lg-4 col-sm-12 text-center">
+                    <img src="{% static 'images/logo/logo_itau.png' %}" class="img-fluid logo_banco" alt="Logo do Banco Itaú">
+                    <p>Allana Capistrano de Oliveira</p>
+                    <p>Banco Itaú</p>
+                    <p>Agência: 6432</p>
+                    <p>Conta Poupança: 07615-3</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright text-center py-3">
+          <p><i class="far fa-copyright"></i> Por Allana Capistrano de Oliveira 2022</p>
+          <p><i class="fas fa-globe-americas"></i> Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
