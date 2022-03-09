@@ -1,0 +1,84 @@
+.section-descricao {
+    width: 100%;
+    padding: 60px;
+}
+
+.text-title{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text-title h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.text-descricao {
+    font-family: 'Nunito', sans-serif;
+    padding-right: 80px;
+    padding-left: 80px;
+    text-align: justify;
+}
+
+.section-menus {
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.compos {
+    padding-bottom: 40px;
+}
+
+.section-menus .card-img {
+    height: 300px;
+    filter: brightness(90%);
+}
+
+.section-menus .card-title {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-top: 50%;
+}
+
+.section-menus .presenteado {
+    filter: brightness(30%);
+}
+
+@media only screen and (max-width: 1023px){
+    .carousel {
+        height: 300px;
+    }
+    .carousel img{
+        height: 300px;
+    }
+    .section-descricao {
+        padding: 30px;
+    }
+    .text-tile {
+        padding: 10px;
+    }
+    .text-title h1{
+        font-size: 24px;
+    }
+    .text-descricao {
+        font-family: 'Nunito', sans-serif;
+        padding: 0px;
+        text-align: justify;
+    }
+    .section-menus {
+        padding: 0px;
+        height: 100%;
+    }
+    .section-menus .card-img {
+        height: 300px;
+    }
+    .section-menus .card-title {
+        margin-top: 70%;
+    }
+    .compos {
+        padding: 10px;
+    }
+}

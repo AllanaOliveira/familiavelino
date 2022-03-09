@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/ide.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/capa/ide.png' %}" alt="Capa do Ide.">
+    </div>
+  </div>
+</div>
+<div class="section-descricao">
+  <div class="text-title">
+    <h1 class="text-center">IDE</h1>
+  </div>
+  <div class="row text-descricao">
+    <h5>
+      Essa página é destinada a conteúdo que fala sobre nossa vida em missões e tudo aquilo que Deus feito em nós e através de nós em nosso chamado.
+    </h5>
+  </div>
+</div>
+<div class="section-menus">
+  <div class="container-fluid">
+    <div class="row">
+      {% for ide in ides %}
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="{% url 'ide:show(<:id>)' id=ide.id %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">{{ ide.titulo }}</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

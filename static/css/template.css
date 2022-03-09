@@ -1,0 +1,130 @@
+body {
+   font-family: 'Playfair Display', serif;
+   box-shadow: 0 4px 12px -2px rgba(#6B75A1, .16);
+}
+.carousel {
+    height: 800px;
+}
+
+.carousel img{
+    height: 800px;
+}
+.principal {
+    height: 80%;
+}
+
+.menuFixo {
+    position: fixed;
+    top: 0px;
+    background-color: #ccf;
+}
+
+.navbar-nav a {
+     text-transform: uppercase;
+}
+
+.background-white{
+    background-color: white;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 3000px;
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.conteudo {
+  height: 100%;
+  background-color: white;
+  padding: 0px;
+}
+
+.redes_sociais {
+    margin: 0 auto;
+}
+
+.nav-item {
+    padding: 10px;
+}
+
+.nav-item i {
+    color: black;
+}
+
+.menu {
+    float: right;
+    padding-right: 50px;
+}
+
+.nome {
+    align: center;
+}
+
+footer {
+    background-color: #f0fff0;
+    height: 20%;
+    position: relative;
+    bottom: 0;
+    color: black;
+    padding-top: 40px;
+}
+
+footer p {
+    margin: 0px;
+}
+
+.text_menu {
+    display: table-cell;
+    width: 400px;
+    margin-top: 50px;
+}
+
+.logo_banco {
+    width: 60px;
+}
+
+.img_mapa {
+    display: table-cell;
+    float: right;
+}
+
+.menus div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label[for="bt_menu"] {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+@media only screen and (max-width: 1023px){
+    .img-fluid{
+        width: 50px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    footer .banco {
+        padding: 10px;
+    }
+}

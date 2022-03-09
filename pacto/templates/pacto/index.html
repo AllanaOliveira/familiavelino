@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/pacto.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/capa/pacto.png' %}" alt="Capa do Pacto.">
+    </div>
+  </div>
+</div>
+<div class="section-descricao">
+  <div class="text-title">
+    <h1 class="text-center">PACTO</h1>
+  </div>
+  <div class="row text-descricao">
+    <h5>
+      Essa página é destinada a contar um pouco sobre nós como casal e como tem sido nossa vida desde o primeiro olhar até ao altar.
+    </h5>
+  </div>
+</div>
+<div class="section-menus">
+  <div class="container-fluid">
+    <div class="row">
+      {% for pacto in pactos %}
+      <div class="compos col-lg-3 col-sm-6">
+        <div class="card">
+          <a class="tile" href="{% url 'pacto:show(<:id>)' id=pacto.id %}">
+            <img class="card-img" src="{% static 'images/pacto/(<:imagem>)' imagem=pacto.imagem %}">
+            <div class="card-img-overlay">
+              <h2 class="card-title">{{ pacto.titulo }}</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

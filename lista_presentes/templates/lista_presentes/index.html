@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/lista_presentes.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/capa/lista_presente.png' %}" alt="Capa do Lista de Presentes.">
+    </div>
+  </div>
+</div>
+<div class="section-descricao">
+  <div class="text-title">
+    <h1 class="text-center">LISTA DE PRESENTES</h1>
+  </div>
+  <div class="row text-descricao">
+    <h5>
+      Essa página é destinada a nossa lista de presentes do casamento. Todos os produtos aqui listados são baseados nos valores de lojas de Maués, onde vamos morar.
+      No momento, não há como realizar a compra desses produtos pois precisamos estar em Maués para realizar a compra.
+      Então, damos a sugestão para quem já quer nos presentear de ir realizando PIX parcelado para nós ou já selecionar seu presente e esperar chegarmos lá para compra-los.
+    </h5>
+  </div>
+</div>
+<div class="section-menus">
+  <div class="container-fluid">
+    <div class="row">
+      {% for lista_presente in lista_presentes %}
+      <div class="compos col-lg-2 col-sm-6">
+        <div class="card">
+            {% if not lista_presente.presente %}
+              <a class="tile" href="{% url 'lista_presentes:exibe_salva_presente' lista_presente.id %}">
+              <img class="card-img" src="/media/{{ lista_presente.foto }}">
+              </a>
+            {% else %}
+                <img class="card-img presenteado" src="/media/{{ lista_presente.foto }}">
+                <div class="card-img-overlay">
+                  <h4 class="card-title text-center">JÁ PRESENTEADO</h4>
+                </div>
+            {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
