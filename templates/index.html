@@ -43,9 +43,9 @@
 <div class="section-menus">
   <div class="container-fluid">
     <div class="row">
-      <div class="compos col-lg-3 col-sm-6">
+      <div class="compos col-lg-3 col-sm-12">
         <div class="card">
-          <a class="tile" href="/eted/?lang=pt-br">
+          <a class="tile" href="{% url 'ide:index' %}">
             <img class="card-img" src="{% static 'images/casal/missao/missao6.jpg' %}">
             <div class="card-img-overlay">
               <h2 class="card-title">IDE</h2>
@@ -54,9 +54,9 @@
           </a>
         </div>
       </div>
-      <div class="compos col-lg-3 col-sm-6">
+      <div class="compos col-lg-3 col-sm-12">
         <div class="card">
-          <a class="tile" href="/eted/?lang=pt-br">
+          <a class="tile" href="{% url 'sapiencia:index' %}">
             <img class="card-img" src="{% static 'images/casal/missao/missao3.jpg' %}">
             <div class="card-img-overlay">
               <h2 class="card-title">SAPIÊNCIA</h2>
@@ -65,9 +65,9 @@
           </a>
         </div>
       </div>
-      <div class="compos col-lg-3 col-sm-6">
+      <div class="compos col-lg-3 col-sm-12">
         <div class="card">
-          <a class="tile" href="/eted/?lang=pt-br">
+          <a class="tile" href="{% url 'plapla:index' %}">
             <img class="card-img" src="{% static 'images/casal/missao/missao4.jpg' %}">
             <div class="card-img-overlay">
               <h2 class="card-title">PLÁPLÁ</h2>
@@ -76,9 +76,9 @@
           </a>
         </div>
       </div>
-      <div class="compos col-lg-3 col-sm-6">
+      <div class="compos col-lg-3 col-sm-12">
         <div class="card">
-          <a class="tile" href="/eted/?lang=pt-br">
+          <a class="tile" href="{% url 'pacto:index' %}">
             <img class="card-img" src="{% static 'images/casal/missao/missao7.jpg' %}">
             <div class="card-img-overlay">
               <h2 class="card-title">PACTO</h2>
@@ -104,7 +104,7 @@
     <h5>
       Neste processo, individual, Deus nos levou a tornarmos amigos e em um determinado momento o Senhor deu a mim, Allana, uma obra de teatro que envolvia dois palhaços...
     </h5>
-    <h5 class="text-center">Quer saber mais da nossa história até aqui? <a href="#">(Saiba mais!)</a></h5>
+    <h5 class="text-center">Quer saber mais da nossa história até aqui? <a href="{% url 'origem:origem' %}">(Saiba mais!)</a></h5>
   </div>
   <div class="container-fluid">
     <div class="row img-nos">
@@ -134,7 +134,7 @@
       Isso foi criando em mim uma vontade de falar do amor de Deus. Ao ver meu Pai como pastor, fui encorajado a desde pequeno gostar de pregar nem que fosse por brincadeira.
       Até que aos 15 anos me batizei e Deus usou muitas pessoas para falar a mim que eu tinha um propósito específico para minha vida.
       Lembro de uma tia ter um sonho que eu recebia uma bíblia de ouro, entregue por um ser enorme e muito alto vestido de branco.
-      Lembro também da minha vó falando que sonhava comigo em <a href="{% url 'ide:index' %}">(continua...)</a>
+      Lembro também da minha vó falando que sonhava comigo em <a href="{% url 'ide:show' 1 %}">(continua...)</a>
     </h5>
     <h6 class="text-center"><strong>Bruno, 28 anos</strong></h6>
     <br>
@@ -142,7 +142,7 @@
       Com 13 anos de idade, em um culto dos adolescentes que falava sobre propósito e dons, Deus tocou em meu coração na oração que falava sobre se levantarem missionários.
       Apartir daquele momento parecia que algo começou a ativar dentro de mim. Eu via meu tio em seus estudos bíblicos e isso começou a me despertar a buscar estudar e conhecer mais da Palavra de Deus.
       Comecei assim a servir no ministério infantil da minha igreja na parte de louvor e coreografia e logo depois no teatro. Aos 16 anos, sentia que havia algo em mim que necessitava ser compartilhado com os demais.
-      Foi quando <a href="#">(continua...)</a>
+      Foi quando <a href="{% url 'ide:show' 2 %}">(continua...)</a>
     </h5>
     <h6 class="text-center"><strong>Allana, 26 anos.</strong></h6>
   </div>

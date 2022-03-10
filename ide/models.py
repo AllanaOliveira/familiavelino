@@ -9,7 +9,10 @@ class Ide(models.Model):
     id = models.AutoField(primary_key=True)
     titulo = models.CharField(max_length=80)
     data_postagem = models.DateField(default=datetime.now, blank=True)
-    texto = models.TextField
+    texto = models.TextField(blank=True)
+
+    def busca_fotos(self):
+        return ImagemIde.objects.all().filter(ide=self)
 
 
 class ImagemIde(models.Model):

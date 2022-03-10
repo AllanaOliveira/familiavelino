@@ -8,3 +8,6 @@ class Origem(models.Model):
     id = models.AutoField(primary_key=True)
     titulo = models.CharField(max_length=80)
     texto = models.TextField(blank=True)
+
+    def quebrar_linha_texto(self):
+        return self.texto.split('</br>')

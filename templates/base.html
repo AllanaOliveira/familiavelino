@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Toggle button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -43,18 +43,17 @@
             <div class="collapse navbar-collapse" id="nav-content">
                 <div class="navbar-nav mr-auto redes_sociais">
                     <div class="row">
-                        <a class="d-none d-md-block nav-link nav-item" href="https://www.instagram.com/familiavelino/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a class="d-none d-md-block nav-link nav-item" href="https://m.facebook.com/familiavelino.ab"  target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="d-none d-lg-block nav-link nav-item" href="https://www.instagram.com/familiavelino/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a class="d-none d-lg-block nav-link nav-item" href="https://m.facebook.com/familiavelino.ab"  target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
                 <div class="navbar-nav">
-                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'lista_presentes:index' %}">Lista de Presentes</a>
                     <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'ide:index' %}">Ide</a>
                     <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'sapiencia:index' %}">Sapiência</a>
                     <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'plapla:index' %}">PláPlá</a>
                     <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'pacto:index' %}">Pacto</a>
-                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'origem' %}">Origem</a>
+                    <a class="nav-link nav-item d-flex justify-content-center small mr-2 menu" href="{% url 'origem:origem' %}">Origem</a>
                 </div>
             </div>
         </div>

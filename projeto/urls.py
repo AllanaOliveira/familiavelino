@@ -26,9 +26,9 @@ urlpatterns = [
     path('pacto/', include('pacto.urls')),
     path('plapla/', include('plapla.urls')),
     path('sapiencia/', include('sapiencia.urls')),
-    path('origem/', views.origem, name="origem"),
+    path('origem/', include('origem.urls')),
     path('admin/', admin.site.urls),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

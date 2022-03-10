@@ -2,24 +2,27 @@
 {% load static %}
 
 {% block link %}
-<link rel="stylesheet" href="{% static 'css/origem.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/ide.css' %}" type="text/css">
 {% endblock %}
 
 {% block corpo %}
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{% static 'images/capa/origem.png' %}" alt="Capa do Origem.">
+      <img class="d-block w-100" src="{% static 'images/capa/ide.png' %}" alt="Capa do Ide.">
     </div>
   </div>
 </div>
 <div class="section-descricao">
   <div class="text-title">
-    <h1 class="text-center">ORIGEM</h1>
+    <h1 class="text-center">{{ ide.titulo }}</h1>
   </div>
   <div class="row text-descricao">
     <h5>
-      Essa página é destinada a conteúdo que oferece dicas de filmes, viagens, músicas, séries e muito mais para ajudar a você a saber o que há de melhor para curtir e se divertir.
+        {% for i in texto %}
+            {{ i }}
+            </br></br>
+        {% endfor %}
     </h5>
   </div>
 </div>
