@@ -11,6 +11,9 @@ class Ide(models.Model):
     data_postagem = models.DateField(default=datetime.now, blank=True)
     texto = models.TextField(blank=True)
 
+    def busca_fotos(self):
+        return ImagemIde.objects.all().filter(ide=self)
+
 
 class ImagemIde(models.Model):
     """Cada instancia desta classe contem uma imagem da galeria, com seu
