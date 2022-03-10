@@ -25,7 +25,7 @@ SECRET_KEY = 'o(awsoob#ia@4847nt^rhf7n@ouwm3h3%og#cc1d%d@^k%bpvr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'oliveiraallana.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'allanaavelino.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pais',
+    'ide',
+    'lista_presentes',
+    'pacto',
+    'ebook',
+    'sapiencia',
+    'plapla',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +125,7 @@ DATE_INPUT_FORMATS = ['%d/%m/%Y']
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/familiavelino/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
