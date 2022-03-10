@@ -18,11 +18,18 @@
     <h1 class="text-center">ORIGEM</h1>
   </div>
   <div class="row text-descricao">
-    <h5>
-        {% for origem in origens %}
+      {% for origem in origens %}
+        <h4>
             <strong>{{ origem.titulo }}</strong>
-        {% endfor %}
-    </h5>
+            </br></br>
+        </h4>
+        <h5>
+            {% for n in origem.quebrar_linha_texto %}
+                {{ n }}
+                </br></br>
+            {% endfor %}
+        </h5>
+      {% endfor %}
   </div>
 </div>
 {% endblock %}
