@@ -22,4 +22,5 @@ app_name = 'ide'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('<int:id>/', views.show, name='show'),
 ]
