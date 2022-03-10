@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/origem.css' %}" type="text/css">
+{% endblock %}
+
+{% block corpo %}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'images/capa/origem.png' %}" alt="Capa do Origem.">
+    </div>
+  </div>
+</div>
+<div class="section-descricao">
+  <div class="text-title">
+    <h1 class="text-center">ORIGEM</h1>
+  </div>
+  <div class="row text-descricao">
+    <h5>
+        {% for origem in origens %}
+            <strong>{{ origem.titulo }}</strong>
+        {% endfor %}
+    </h5>
+  </div>
+</div>
+{% endblock %}
