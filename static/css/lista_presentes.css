@@ -47,7 +47,7 @@
     filter: brightness(30%);
 }
 
-@media only screen and (max-width: 1023px){
+@media screen and (max-width: 1023px){
     .carousel {
         height: 300px;
     }
@@ -76,7 +76,7 @@
         height: 300px;
     }
     .section-menus .card-title {
-        margin-top: 70%;
+        margin-top: 30%;
     }
     .compos {
         padding: 10px;

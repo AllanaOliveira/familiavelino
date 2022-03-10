@@ -19,7 +19,10 @@
   </div>
   <div class="row text-descricao">
     <h5>
-        {{ ide.texto }}
+        {% for i in texto %}
+            {{ i }}
+            </br></br>
+        {% endfor %}
     </h5>
   </div>
 </div>
