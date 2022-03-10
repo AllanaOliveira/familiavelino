@@ -27,7 +27,7 @@
 }
 
 .section-menus .card-img {
-    height: 400px;
+    height: 300px;
     filter: brightness(86%);
 }
 
@@ -35,10 +35,26 @@
     font-family: 'Nunito', sans-serif;
     color: white;
     font-weight: bold;
-    margin-top: 90%;
+    margin-top: 100%;
 }
 
-@media only screen and (max-width: 1023px){
+.galeria {
+    height: 800px;
+    margin-bottom: 20px;
+}
+.galeria div.img {
+    margin: 5px;
+    float: left;
+    height: 400px;
+    width: 300px;
+}
+
+.galeria div.img img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1023px){
     .carousel {
         height: 300px;
     }
@@ -71,5 +87,8 @@
     }
     .compos {
         padding: 10px;
+    }
+    .galeria {
+        margin-bottom: 20px;
     }
 }

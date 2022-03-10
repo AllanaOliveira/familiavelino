@@ -11,5 +11,6 @@ def index(request):
 
 def show(request, id):
     ide = get_object_or_404(Ide, pk=id)
+    imagens_ide = ImagemIde.objects.filter(ide=ide)
     texto = ide.texto.split('</br>')
-    return render(request, 'ide/show.html', {'ide': ide, 'texto': texto})
+    return render(request, 'ide/show.html', {'ide': ide, 'texto': texto, 'imagens_ide': imagens_ide })
