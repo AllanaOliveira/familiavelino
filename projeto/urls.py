@@ -22,7 +22,6 @@ from projeto import views, settings
 urlpatterns = [
     path('', views.index, name="index"),
     path('ide/', include('ide.urls')),
-    path('lista_presentes/', include('lista_presentes.urls')),
     path('pacto/', include('pacto.urls')),
     path('plapla/', include('plapla.urls')),
     path('sapiencia/', include('sapiencia.urls')),

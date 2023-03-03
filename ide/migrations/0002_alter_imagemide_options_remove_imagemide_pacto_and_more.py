@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='imagemide',
-            name='pacto',
+            name='ide',
         ),
         migrations.AddField(
             model_name='imagemide',

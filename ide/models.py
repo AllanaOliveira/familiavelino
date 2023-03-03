@@ -30,7 +30,7 @@ class ImagemIde(models.Model):
     foto = models.ImageField(
         null=True,
         blank=True,
-        upload_to='galeria/pacto',
+        upload_to='galeria/ide',
     )
 
     def __unicode__(self):

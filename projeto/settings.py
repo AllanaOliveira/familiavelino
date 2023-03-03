@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ide',
-    'lista_presentes',
     'pacto',
     'ebook',
     'sapiencia',
