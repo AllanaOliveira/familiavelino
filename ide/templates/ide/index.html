@@ -27,12 +27,12 @@
   <div class="container-fluid">
     <div class="row">
       {% for ide in ides %}
-      <div class="compos col-lg-3 col-sm-12">
+      <div class="compos col-lg-2 col-sm-12">
         <div class="card">
           <a class="tile" href="{% url 'ide:show' ide.id %}">
             <img class="card-img" src="/media/{{ ide.busca_fotos.first.foto }}">
             <div class="card-img-overlay">
-              <h2 class="card-title">{{ ide.titulo }}</h2>
+              <h5 class="card-title">{{ ide.titulo }}</h5>
             </div>
           </a>
         </div>

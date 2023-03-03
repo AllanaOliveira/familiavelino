@@ -26,4 +26,13 @@
     </h5>
   </div>
 </div>
+<div class="galeria">
+  {% for imagem in imagens_ide %}
+    <div class="img">
+      <a target="_blank" href="/media/{{ imagem.foto }}">
+        <img src="/media/{{ imagem.foto }}" alt="{{ imagem.titulo }}" width="300" height="200">
+      </a>
+    </div>
+  {% endfor %}
+</div>
 {% endblock %}

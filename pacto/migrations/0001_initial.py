@@ -29,11 +29,11 @@ class Migration(migrations.Migration):
                 ('titulo', models.CharField(max_length=100)),
                 ('slug', models.SlugField(blank=True, max_length=100, unique=True)),
                 ('descricao', models.TextField(blank=True)),
-                ('foto', models.ImageField(blank=True, null=True, upload_to='galeria/pacto')),
-                ('pacto', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='pacto.pacto')),
+                ('foto', models.ImageField(blank=True, null=True, upload_to='galeria/ide')),
+                ('ide', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ide.ide')),
             ],
             options={
-                'ordering': ('pacto', 'titulo'),
+                'ordering': ('ide', 'titulo'),
             },
         ),
     ]
