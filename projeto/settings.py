@@ -25,7 +25,7 @@ SECRET_KEY = 'o(awsoob#ia@4847nt^rhf7n@ouwm3h3%og#cc1d%d@^k%bpvr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.familiavelino.com.br', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['familiavelino.herokuapp.com/', '127.0.0.1', 'localhost']
 
 
 # Application definition
